@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: style ab;;
+  padding:2px;
+  margin: 2px;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 4px solid #a85656;
+  cursor: grab;
+  position: relative;
+}
+
+li.purchased {
+  text-decoration:line-through;
+  color: #131111;
+}
+
+li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+li.purchased::before {
+  background-color: #4CAF50; /* Green for purchased items */
+}
